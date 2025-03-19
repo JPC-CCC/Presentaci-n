@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Pablo - Diseñador Gráfico y Desarrollador Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Sección Hero */
+        .hero {
+            background: linear-gradient(135deg, #6e7bff, #33d9b2);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            transition: background 0.5s ease;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .hero a {
+            text-decoration: none;
+            color: #fff;
+            padding: 15px 30px;
+            background-color: #333;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        .hero a:hover {
+            background-color: #444;
+        }
+
+        /* Sección Servicios */
+        .services-section {
+            padding: 50px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .services-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        .service {
+            display: inline-block;
+            width: 30%;
+            margin: 20px;
+            padding: 30px;
+            background-color: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .service:hover {
+            transform: translateY(-10px);
+        }
+        .service h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        .service p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Testimonios */
+        .testimonials-section {
+            background-color: #f1f1f1;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .testimonials-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        .testimonial {
+            display: inline-block;
+            width: 45%;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+        .testimonial p {
+            font-style: italic;
+            color: #333;
+        }
+        .testimonial cite {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Animación de aparición */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Sección de Habilidades */
+        .skills-section {
+            padding: 50px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .skills-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        .progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            height: 20px;
+            width: 80%;
+            margin: 10px 0;
+        }
+        .progress {
+            background-color: #6e7bff;
+            height: 100%;
+            border-radius: 5px;
+        }
+
+        /* Sección de Contacto */
+        .contact-section {
+            padding: 50px 20px;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #6e7bff;
+        }
+        .contact-form button {
+            background-color: #6e7bff;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #5a6cc9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section class="hero">
+            <div class="container">
+                <h1>Hola, soy Juan Pablo</h1>
+                <p>Diseñador gráfico y desarrollador web en formación. Me especializo en miniaturas, banners y sitios web.</p>
+                <a href="#contact-form" class="button">Contacta conmigo</a>
+            </div>
+        </section>
+    </header>
+
+    <!-- Sección de Servicios -->
+    <section class="services-section" id="services">
+        <h2>Mis Servicios</h2>
+        <div class="service">
+            <h3>Diseño Gráfico</h3>
+            <p>Creación de miniaturas, banners, logotipos, y otros diseños gráficos personalizados.</p>
+        </div>
+        <div class="service">
+            <h3>Desarrollo Web</h3>
+            <p>Desarrollo de sitios web atractivos y funcionales con las últimas tecnologías.</p>
+        </div>
+        <div class="service">
+            <h3>Consultoría de Marca</h3>
+            <p>Ayudo a marcas a construir su identidad visual de forma coherente y profesional.</p>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section class="testimonials-section" id="testimonials">
+        <h2>Testimonios</h2>
+        <div class="testimonial" style="animation-delay: 0.2s;">
+            <p>"Juan Pablo me ayudó a diseñar un sitio web increíble. Es muy profesional y creativo, ¡altamente recomendado!"</p>
+            <cite>- Cliente Satisfecho</cite>
+        </div>
+        <div class="testimonial" style="animation-delay: 0.4s;">
+            <p>"Las miniaturas y banners que diseñó superaron mis expectativas. Gran atención al detalle."</p>
+            <cite>- Colega Creativo</cite>
+        </div>
+    </section>
+
+    <!-- Sección de Habilidades -->
+    <section class="skills-section" id="skills">
+        <h2>Habilidades</h2>
+        <div class="progress-bar">
+            <div class="progress" style="width: 80%;"></div>
+        </div>
+        <h3>Diseño Gráfico</h3>
+        <div class="progress-bar">
+            <div class="progress" style="width: 70%;"></div>
+        </div>
+        <h3>Desarrollo Web</h3>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contact-section" id="contact-form">
+        <h2>Contacta conmigo</h2>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9XmeNKrkzvbOsHAP7H1zVpJ-N2IiLYGUZAlcBSBtZJwugQw/viewform?usp=dialog" class="btn-contact">Contáctame</a>
+
+    
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Redes Sociales</h3>
+        <a href="https://x.com/jpc_ccc">Twitter</a>
+        <a href="https://discord.gg/QNupfA4v">Discord</a>
+        <a href="https://www.instagram.com/jpc_cccc/">Instagram</a>
+    </footer>
+
+    <!-- Script para animaciones -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.testimonial');
+            elements.forEach(function(element) {
+                if (element.getBoundingClientRect().top < window.innerHeight) {
+                    element.style.opacity = 1;
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
